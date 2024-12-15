@@ -1,6 +1,7 @@
 package com.innercicle.testratelimiter;
 
 import com.innercicle.annotations.RateLimiting;
+import com.innercicle.testratelimiter.car.service.TestService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -14,10 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class TestController {
 
+    private final TestService testService;
+
     @GetMapping("/test")
-    @RateLimiting(name="test", cacheKey = "#parameter.getTest()")
     public void test(RequestParameter parameter) {
-        log.error("test {}", parameter.getTest());
+        testService.test(parameter);
     }
 
     @ToString

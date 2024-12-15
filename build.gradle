@@ -26,7 +26,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'com.github.innercicle-be-rate-limiter:rate-limiter-spring-boot-starter:v1.0.1'
+    implementation 'com.github.innercicle-be-rate-limiter:rate-limiter-spring-boot-starter:v0.0.4'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.postgresql:postgresql:42.7.2'
     compileOnly 'org.projectlombok:lombok'
